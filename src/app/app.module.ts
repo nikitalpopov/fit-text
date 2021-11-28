@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component'
 import { AngularMaterialModule } from './material.module'
+import { FitDirective } from './fit.directive'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FitDirective,
   ],
   imports: [
     BrowserModule,
