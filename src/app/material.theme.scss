@@ -1,0 +1,81 @@
+@use '@angular/material' as mat;
+@include mat.core;
+
+$custom-typography: mat.define-typography-config(
+  $font-family: '"Open Sans", Roboto, sans-serif;'
+);
+@include mat.core($custom-typography);
+
+$white-palette: (
+  50 : #fff,
+  100 : #fff,
+  200 : #fff,
+  300 : #fff,
+  400 : #fff,
+  500 : #fff,
+  600 : #fff,
+  700 : #fff,
+  800 : #fff,
+  900 : #fff,
+  A100 : #fff,
+  A200 : #fff,
+  A400 : #fff,
+  A700 : #fff,
+  contrast: (
+    50 : #000,
+    100 : #000,
+    200 : #000,
+    300 : #000,
+    400 : #000,
+    500 : #000,
+    600 : #000,
+    700 : #000,
+    800 : #000,
+    900 : #000,
+    A100 : #000,
+    A200 : #000,
+    A400 : #000,
+    A700 : #000,
+  )
+);
+$tuscany-palette: (
+  50 : #f8f3f5,
+  100 : #eee2e5,
+  200 : #e3cfd4,
+  300 : #d7bbc2,
+  400 : #cfadb5,
+  500 : #c69ea8,
+  600 : #c096a0,
+  700 : #b98c97,
+  800 : #b1828d,
+  900 : #a4707d,
+  A100 : #fff,
+  A200 : #ffeef2,
+  A400 : #ffbbcb,
+  A700 : #ffa1b7,
+  contrast: (
+    50 : #000,
+    100 : #000,
+    200 : #000,
+    300 : #000,
+    400 : #000,
+    500 : #000,
+    600 : #000,
+    700 : #000,
+    800 : #000,
+    900 : #000,
+    A100 : #000,
+    A200 : #000,
+    A400 : #000,
+    A700 : #000,
+  )
+);
+
+// Dark theme
+$dark-primary: mat.define-palette($white-palette);
+$dark-accent: mat.define-palette($tuscany-palette, a200, a100, a400);
+$dark-warn: mat.define-palette(mat.$deep-orange-palette);
+$dark-theme: mat.define-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@include mat.core-theme($dark-theme);
+@include mat.all-component-themes($dark-theme);
