@@ -1,0 +1,12 @@
+<div id="event" *ngIf="eventObservable | async as event; else noEvent">
+  <div id="title" fit>Time to {{ event.title }}</div>
+  <div id="timer" fit *ngIf="intervalObservable | async as interval; else noInterval">{{ interval }}</div>
+</div>
+
+<ng-template #noEvent>
+  <div>Event title and date are not specified</div>
+</ng-template>
+
+<ng-template #noInterval>
+  <div>Measuring interval...</div>
+</ng-template>

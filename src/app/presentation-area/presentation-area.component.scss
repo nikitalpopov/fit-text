@@ -1,0 +1,30 @@
+:host {
+  color: rgb(198 158 168);
+  display: contents;
+  text-align: center;
+  width: 100%;
+}
+
+#event {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+#title {
+  font-weight: bold;
+}
+
+#title,
+#timer {
+  /*
+   * Small cheating but let's call it optimization
+   * We will start fitting from this value and it fits text of ~20 chars
+   * pretty fine, so it's a good start
+   */
+  font-size: 8vw;
+  width: fit-content;
+  white-space: nowrap;
+}

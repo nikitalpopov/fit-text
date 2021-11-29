@@ -1,0 +1,16 @@
+<form id="form" [formGroup]="formGroup" (ngSubmit)="onSubmit()" (keyup.enter)="submitBtn.click()">
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" (input)="submitBtn.click()">
+    <mat-error *ngIf="title?.errors?.minlength || title?.errors?.required || title?.errors?.empty">
+      Title shouldn't be empty
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Date</mat-label>
+    <input matInput formControlName="date" [matDatepicker]="picker" [min]="tomorrow" (dateInput)="submitBtn.click()">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button #submitBtn>Submit</button>
+</form>

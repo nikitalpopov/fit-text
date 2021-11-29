@@ -29,9 +29,17 @@ export class DataService {
   public readonly intervalObservable = this.intervalSubject.asObservable()
 
   constructor() {
-    // Useful when we have initial value in localStorage.
+    /* Useful when we have initial value in localStorage. */
     const event = this.event
-    this.updateEventValue(event)
+    if (event === undefined) {
+      /* If no value is stored, using default */
+      this.event = {
+        title: 'New Years Eve',
+        date: new Date(`${new Date().getFullYear()}-12-31`),
+      }
+    } else {
+      this.updateEventValue(event)
+    }
   }
 
   /**

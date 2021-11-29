@@ -1,0 +1,21 @@
+:host {
+  display: contents;
+  width: 100%;
+}
+
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin: 28px;
+  place-content: center;
+
+  button {
+    display: none;
+  }
+}
+
+.form-field {
+  max-width: 300px;
+  width: 100%;
+}

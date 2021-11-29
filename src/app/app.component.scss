@@ -1,0 +1,17 @@
+:host {
+  --padding: 28px;
+
+  display: flex;
+  min-height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+  place-items: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  padding: var(--padding);
+  width: calc(100% - 2 * var(--padding));
+}
