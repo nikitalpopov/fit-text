@@ -1,8 +1,10 @@
 # FitText
 
-Project is built with Angular 13 and Angular Material.
-date-fns is used for Datetime values handling.
-[Hosted on Netlify](https://fit-text.netlify.app/)
+Project is built with Angular 13 and Angular Material.  
+date-fns is used for Datetime values handling.  
+
+[Hosted on Netlify](https://fit-text.netlify.app/)  
+[![Open demo](./screenshot.webp)](https://fit-text.netlify.app/)
 
 ## Run locally
 
